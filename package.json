@@ -28,6 +28,7 @@
     "clean": "rimraf dist",
     "format": "prettier --write .",
     "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
     "release": "standard-version",
     "test": "npm run build && vitest",
     "watch": "npm run build -- --watch"
