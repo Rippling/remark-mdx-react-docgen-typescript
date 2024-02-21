@@ -104,7 +104,6 @@ You may also specify additional attributes that will be forwarded as props to Co
 - `rootDir: string`: Change what `<rootDir>` refers to. Defaults to `process.cwd()`.
 - `reactDocGenOptions: object`: Options for [`react-docgen-typescript`](https://github.com/styleguidist/react-docgen-typescript?tab=readme-ov-file#options).
 
-
 ## Testing
 
 After installing dependencies with `npm install`, the tests can be run with: `npm test`
