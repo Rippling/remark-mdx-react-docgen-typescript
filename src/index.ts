@@ -6,7 +6,7 @@ import { parse, type ParserOptions } from 'react-docgen-typescript';
 
 export type PluginOptions = {
   directiveName?: string;
-  fileAttrName?: string;
+  fileAttributeName?: string;
   componentName?: string;
   reactDocGenOptions?: ParserOptions;
   rootDir?: string;
@@ -36,7 +36,7 @@ function getHelpersText(params: { directiveName: string }) {
 
 const plugin = ({
   directiveName = 'component-docs',
-  fileAttrName = 'file',
+  fileAttributeName = 'file',
   componentName = 'ComponentDocs',
   reactDocGenOptions,
   rootDir = process.cwd(),
@@ -77,12 +77,12 @@ const plugin = ({
         }
 
         const attributes = node.attributes || {};
-        const { [fileAttrName]: filePath, ...restAttrs } = attributes;
+        const { [fileAttributeName]: filePath, ...restAttrs } = attributes;
 
         if (!filePath) {
           vfile.fail(
             `
-            ${directiveName} directive must have ${fileAttrName} attribute.
+            ${directiveName} directive must have ${fileAttributeName} attribute.
             
             ${getHelpersText({ directiveName })}
             `,
@@ -126,7 +126,7 @@ const plugin = ({
             },
             {
               type: 'mdxJsxAttribute',
-              name: fileAttrName,
+              name: fileAttributeName,
               value: absoluteFilePath,
             },
             ...Object.entries(restAttrs).map(([name, value]) => ({
