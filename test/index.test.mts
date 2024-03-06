@@ -250,7 +250,7 @@ test('Used Options', async () => {
         {
           directiveName: 'props-table',
           componentName: 'PropsTable',
-          fileAttrName: 'filePath',
+          fileAttributeName: 'filePath',
           rootDir: `${cwd}/src`,
         },
       ],

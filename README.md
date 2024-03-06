@@ -100,7 +100,7 @@ You may also specify additional attributes that will be forwarded as props to Co
 
 - `componentName: string`: The name of tag/component this plugin will use in JSX. Defaults to `ComponentDocs`.
 - `directiveName: string`: The directive name. Defaults to `component-docs`.
-- `fileAttrName: string`: The attribute name for file path. Defaults to `file`.
+- `fileAttributeName: string`: The attribute name for file path. Defaults to `file`.
 - `rootDir: string`: Change what `<rootDir>` refers to. Defaults to `process.cwd()`.
 - `reactDocGenOptions: object`: Options for [`react-docgen-typescript`](https://github.com/styleguidist/react-docgen-typescript?tab=readme-ov-file#options).
 
