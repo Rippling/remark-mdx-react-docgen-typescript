@@ -34,7 +34,7 @@ function getHelpersText(params: { directiveName: string }) {
   `;
 }
 
-const plugin = ({
+const attacher = ({
   directiveName = 'component-docs',
   fileAttributeName = 'file',
   componentName = 'ComponentDocs',
@@ -56,7 +56,7 @@ const plugin = ({
         if (node.type === 'textDirective') {
           vfile.fail(
             `
-            Unexpected \':${directiveName}\` text directive, use two colons for a leaf directive
+            Unexpected ':${directiveName}' text directive, use two colons for a leaf directive
             
             ${getHelpersText({ directiveName })}
             `,
@@ -141,4 +141,4 @@ const plugin = ({
   };
 };
 
-export default plugin;
+export default attacher;
